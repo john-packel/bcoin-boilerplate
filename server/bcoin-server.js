@@ -47,7 +47,6 @@ node.open()
 .then(() => node.startSync());
 
 node.http.post('/multisig/:id', co(function* postMultisig(req, res) {
-  console.log('Amount', Amount);
   const passphrase = req.body.passphrase;
   const rate = Amount.value(req.body.rate);
   const destination = req.body.destination;
